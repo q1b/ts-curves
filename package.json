@@ -1,0 +1,83 @@
+{
+  "name": "ts-curves",
+  "version": "1.0.1",
+  "description": "Collection of Cubic Bezier Curves Can be Used for creating requestAnimationFrame transition",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sacarvy/ts-curves.git"
+  },
+  "homepage": "https://github.com/sacarvy/ts-curves",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite --config ./playground/vite.config.ts",
+    "generate": "vite --config ./playground/vite.config.ts build",
+    "build": "tsc && unbuild",
+    "lint": "eslint --ext .ts,vue --ignore-path .gitignore .",
+    "test": "vitest --run",
+    "test:watch": "vitest --watch",
+    "coverage": "vitest run --coverage",
+    "prepare": "husky install",
+    "release": "pnpm test && npx standard-version && git push --follow-tags && npm publish --access public"
+  },
+  "lint-staged": {
+    "*.ts": "eslint --fix",
+    "*": "prettier -w -u"
+  },
+  "keywords": [
+    "easing",
+    "cubic-bezier",
+    "Cubic Bezier Curves",
+    "animation",
+    "transition",
+    "elastic-curves",
+    "elastic-easing",
+    "snap-easings",
+    "cubic bezier easing",
+    "easing curves",
+    "2022 easing",
+    "typescript library",
+    "typescript easing library"
+  ],
+  "author": "Sukhpreet Singh (https://twitter.com/XSukhpreet)",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "src",
+    "dist"
+  ],
+  "devDependencies": {
+    "@babel/types": "7.17.0",
+    "@types/node": "latest",
+    "@typescript-eslint/eslint-plugin": "5.16.0",
+    "@typescript-eslint/parser": "5.16.0",
+    "eslint": "8.12.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-prettier": "4.0.0",
+    "husky": "7.0.4",
+    "jsdom": "19.0.0",
+    "lint-staged": "12.3.7",
+    "path": "0.12.7",
+    "prettier": "latest",
+    "standard-version": "9.3.2",
+    "typescript": "latest",
+    "unbuild": "0.7.2",
+    "vite": "2.8.6",
+    "vitest": "latest"
+  },
+  "bugs": {
+    "url": "https://github.com/sacarvy/ts-curves/issues"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {}
+}
